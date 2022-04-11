@@ -1,0 +1,137 @@
+
+/*  Setting background to the body  */
+body {
+  
+    background: linear-gradient(-60deg, #f04713, #e45593, #17b8f3, #09ec14);
+    animation: Gradient 100s ease infinite;
+    background-size: 500% 500%;
+
+  
+}
+  
+  /*  altering styles to the elements */
+
+  .music_player {
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .music_details {
+    display: flex;
+     justify-content: center;
+     flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .song-art {
+    margin: 20px;
+    height: 400px;
+    width: 400px;
+    background-image: url("https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: cover;
+    border-radius: 25%;
+  }
+  
+  .nowPlaying {
+    font-size: 1rem;
+  }
+  
+  .songName {
+    font-size: 3rem;
+  }
+  
+  .song-artist {
+    font-size: 1.5rem;
+  }
+  
+  .song_button {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+  }
+  
+  .pausesong, .prevsong, .nextsong {
+    padding: 25px;
+    opacity: 0.6;
+  
+    transition: opacity .5s;
+  }
+  
+  .pausesong:hover, .prevsong:hover, .nextsong:hover {
+    opacity: 1.0;
+  }
+  
+  .container1 {
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* appearance of the  seek and volume slider */
+  .seekslider, .volumeslider {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 15px;
+    background: rgb(13, 0, 0);
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .4s;
+  }
+  
+  /* appearance of the slider thumb */
+  .seekslider::-webkit-slider-thumb, .volumeslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .seekslider:hover, .volumeslider:hover {
+    opacity: 1.0;
+  }
+  
+  .seekslider {
+    width: 70%;
+  }
+  
+  .volumeslider {
+    width: 40%;
+  }
+  
+  .now-time, .total-time {
+    padding: 5px;
+  }
+  
+  i.fa-volume-down, i.fa-volume-up {
+    padding: 5px;
+  }
+  
+  i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+    cursor: pointer;
+  }
+
+  
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

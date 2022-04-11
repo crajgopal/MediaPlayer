@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Javascript Assement Music Player</title>
+  <!-- Load font-awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <!-- Link CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body><fieldset> <legend><strong>Music Player :</strong></legend>
+	
+  <div class="music_player">
+      <!-- adding Song details to section-->
+    <div class="music_details">
+      <div class="nowPlaying">PLAYING A OF B</div>
+      <div class="song-art"></div>
+      <div class="songName">Song Name</div>
+      <div class="song-artist">SongArtist Name</div>
+    </div>
+    <!--  Adding tracks , next previous , pausing songs and attaching functions -->
+    <div class="song_button">
+      <div class="prevsong" onclick="previousSong()"><i class="fa fa-step-backward fa-2x"></i></div>
+      <div class="pausesong" onclick="ppauseSong()"><i class="fa fa-play-circle fa-5x"></i></div>
+      <div class="nextsong" onclick="nextSong()"><i class="fa fa-step-forward fa-2x"></i></div>
+    </div>
+    <div class="container1">
+        <!-- adding  seek and volume sliders to container-->
+      <div class="now-time">00:00</div>
+      <input type="range" min="1" max="100" value="0" class="seekslider" onchange="seekingTo()">
+      <div class="total-time">00:00</div>
+    </div>
+    <div class="container1">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100" value="99" class="volumeslider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+  </div>
+
+  <!-- Linking the javascript file for the player -->
+  <script src="player.js"></script>
+</fieldset>
+</body>
+</html>
